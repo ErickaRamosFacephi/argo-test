@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: netverify-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      protocol: TCP
+      appProtocol: http
+      targetPort: 8000
+      nodePort: 31080
+  selector:
+    app.kubernetes.io/name: netverify
+

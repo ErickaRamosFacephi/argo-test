@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netverify-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: netverify
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: netverify
+    spec:
+      containers:
+      - name: netverify-container
+        image: 930031006748.dkr.ecr.eu-west-2.amazonaws.com/providers-hub/netverify:0.0.0
+        env:
+          - name: "PORT"
+            value: "8000"
+          - name: "URL_BASE_JUMIO"
+            value: "http://localhost:3001/api/jumio"
+          - name: "PROVIDER"
+            value: "jumio"
+        ports:
+          - containerPort: 8000
+
