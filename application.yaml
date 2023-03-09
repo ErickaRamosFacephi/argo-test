@@ -7,7 +7,7 @@ spec:
   source:
     path: netverify
     repoURL: https://github.com/ErickaRamosFacephi/argo-test.git
-    targetRevision: HEAD
+    targetRevision: deploy-eks
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: app
