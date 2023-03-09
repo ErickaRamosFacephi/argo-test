@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: netverify-container
-        image: netverify:0.0.0
+        image: 930031006748.dkr.ecr.eu-west-2.amazonaws.com/netverify-app:0.0.1
         env:
           - name: "PORT"
             value: "8000"
