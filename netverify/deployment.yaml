@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: netverify-container
-        image: 930031006748.dkr.ecr.eu-west-2.amazonaws.com/netverify-app:0.0.1
+        image:  930031006748.dkr.ecr.eu-west-2.amazonaws.com/netverify-app:0.0.2
         env:
           - name: "PORT"
             value: "8000"
@@ -24,4 +24,3 @@ spec:
             value: "jumio"
         ports:
           - containerPort: 8000
-
